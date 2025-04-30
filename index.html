@@ -21,28 +21,22 @@ h1 {
       font-size: 28px;
       color: #005d47;
     }
-    .temas-container {
-      justify-content: center;
-      align-content: center;
+    .cards-container {
+      display: flex;
       gap: 20px;
-      padding: 60px;
-      grid-template-columns: repeat(3, 1fr);
-      height: 90vh;
-      box-sizing: border-box;
+      flex-wrap: wrap;
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
     .tema-card {
-      width: 250px;
-      height: 250px;
-      gap: 110px;
-      justify-content: center;
-      align-content: center;
-      font-size 36px;
       background: white;
-      border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-      cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      padding: 20px;
+      border-radius: 10px;
+      width: 220px;
       text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
     /* Tooltip */
     .tema-card::after {
@@ -205,7 +199,7 @@ h1 {
 }
 
 .hero {
-  background-image: url('fundo_conclima.jpg');
+  background-image: url('Fundo_Conclima_Plataforma.jpg');
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -216,25 +210,7 @@ h1 {
   box-sizing: border-box;
   padding-bottom: 80px;
 }
-
-.cards-container {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  background-color: rgba(255, 255, 255, 0.85);
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  width: 220px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
- </style>
+</style>
 </head>
 <body>
   <!-- Menu superior fixo -->
