@@ -6,12 +6,51 @@
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <style>
     body, html {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background-color: #f7f9f9;
-      color: #005d47;
-    }
-    h1 {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  }
+
+.menu-topo {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #004c45;
+  padding: 10px 0;
+  z-index: 1000;
+  }
+
+.menu-topo ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  }
+
+.menu-topo li {
+  margin: 0 20px;
+  }
+
+.menu-topo a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  }
+
+.hero {
+  background-image: url('Fundo_Conclima_Plataforma.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-sizing: border-box;
+  padding-bottom: 80px;
+  }
+   h1 {
       text-align: center;
       position: fixed;
       margin-bottom: 30px;
@@ -162,67 +201,7 @@
     .card a:hover {
       text-decoration: underline;
     }
-       .menu-topo {
-     position: fixed;
-     top: 0;
-     width: 100%;
-     background: #004c45;
-     padding: 10px 0;
-     z-index: 1000;
-    }
-
-   .menu-topo ul {
-     list-style: none;
-     display: flex;
-     justify-content: center;
-     margin: 0;
-     padding: 0;
-    }
-
-   .menu-topo li {
-      margin: 0 20px;
-    }
-
-   .menu-topo a {
-     color: white;
-     text-decoration: none;
-     font-weight: bold;
-   }
-
-   .hero {
-     position: fixed;
-     background-image: url('Fundo_Conclima_Plataforma.jpg');
-     background-size: cover;
-     background-position: center;
-     min-height: 100vh;
-     padding-top: 100px;
-     display: flex;
-     justify-content: center;
-     align-items: flex-end;
-     box-sizing: border-box;
-     padding-bottom: 80px;
-    }
-
-  .temas-container {
-    position: fixed;
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 30px;
-    border-radius: 16px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  }
-
-  .temas-card {
-    background: white;
-    position: fixed;
-    padding: 20px;
-    border-radius: 10px;
-    width: 220px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}    
+     
 </head>
 <body>
   <!-- Menu superior fixo -->
