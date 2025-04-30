@@ -8,38 +8,38 @@
   <link rel="stylesheet" href="style.css">
   <style>
     body {
-     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 40px;
+      background-color: #f7f9f9;
+      color: #005d47;
+    }
+   .menu-topo {
+     position: fixed;
+     top: 0;
+     width: 100%;
+     background: #004c45;
+     padding: 10px 0;
+     z-index: 1000;
+    }
+
+   .menu-topo ul {
+     list-style: none;
+     display: flex;
+     justify-content: center;
      margin: 0;
-     padding: 40px;
-     background-color: #f7f9f9;
-     color: #005d47;
-  }
- .menu-topo {
-   position: fixed;
-   top: 0;
-   width: 100%;
-   background: #004c45;
-   padding: 10px 0;
-   z-index: 1000;
-  }
+     padding: 0;
+    }
 
- .menu-topo ul {
-   list-style: none;
-   display: flex;
-   justify-content: center;
-   margin: 0;
-   padding: 0;
- }
+   .menu-topo li {
+      margin: 0 20px;
+    }
 
- .menu-topo li {
-   margin: 0 20px;
- }
-
- .menu-topo a {
-   color: white;
-   text-decoration: none;
-   font-weight: bold;
- }
+   .menu-topo a {
+     color: white;
+     text-decoration: none;
+     font-weight: bold;
+   }
 
  .hero {
    position: fixed;
@@ -76,14 +76,13 @@
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
     
-h1 {
+    h1 {
       text-align: center;
       position: fixed;
       margin-bottom: 30px;
       font-size: 28px;
       color: #005d47;
-      position: fixed;
-    }
+      }
  
     /* Tooltip */
     .tema-card::after{ 
