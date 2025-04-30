@@ -15,31 +15,80 @@ body, html {
     background-color: #f7f9f9;
     color: #005d47;
 }
+.menu-topo {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #004c45;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.menu-topo ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-topo li {
+  margin: 0 20px;
+}
+
+.menu-topo a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  position: fixed;
+  background-image: url('Fundo_Conclima_Plataforma.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-sizing: border-box;
+  padding-bottom: 80px;
+}
+
+.temas-container {
+  position: fixed;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.temas-card {
+  background: white;
+  position: fixed;
+  padding: 20px;
+  border-radius: 10px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+    
 h1 {
       text-align: center;
+      position: fixed;
       margin-bottom: 30px;
       font-size: 28px;
       color: #005d47;
+      position: fixed;
     }
-    .temas-container {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      background-color: rgba(255, 255, 255, 0.85);
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
-    .tema-card {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      width: 220px;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
+ 
     /* Tooltip */
-    .tema-card::after {
+    .tema-card::after{ 
+      position: fixed;
       content: attr(data-tooltip);
       position: absolute;
       bottom: 50%;
@@ -60,6 +109,7 @@ h1 {
     }
     /* Seta da tooltip */
     .tema-card::before {
+      position: fixed;
       content: '';
       position: absolute;
       bottom: 100%;
@@ -95,6 +145,7 @@ h1 {
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
     .tema-card i {
+      position: fixed;
       margin-bottom: 10px;
       font-size: 15px;
       width: 40px;
@@ -103,6 +154,7 @@ h1 {
       align-content: center;
     }
     .tema-card span {
+      position: fixed;
       font-size: 22px;
       font-weight: 600;
       line-height: 1.2;      
@@ -115,17 +167,20 @@ h1 {
       color: #4fb24c;
     }
     .tema-card svg {
+      position: fixed;
       width: 60px;
       height: 60px;
       align-content: center;
       color: #005d47;
     }
     .voltar {
+      position: fixed;
       display: none;
       margin: 20px auto;
       text-align: center;
     }
     .voltar button {
+      position: fixed;
       background-color: #005d47;
       color: white;
       padding: 10px 20px;
@@ -136,9 +191,11 @@ h1 {
       transition: background 0.2s;
     }
     .voltar button:hover {
+      position: fixed;
       background-color: #005d47;
     }
     .resultados {
+      position: fixed;
       max-width: 800px;
       margin: 0 auto;
       display: none;
@@ -149,6 +206,7 @@ h1 {
       to { opacity: 1; transform: translateY(0); }
     }
     .card {
+      position: fixed;
       background: white;
       border-radius: 10px;
       padding: 20px;
@@ -171,46 +229,6 @@ h1 {
     .card a:hover {
       text-decoration: underline;
     }
-.menu-topo {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #004c45;
-  padding: 10px 0;
-  z-index: 1000;
-}
-
-.menu-topo ul {
-  list-style: none;
-  display: grid;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-}
-
-.menu-topo li {
-  margin: 0 20px;
-}
-
-.menu-topo a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.hero {
-  background-image: url('Fundo_Conclima_Plataforma.jpg');
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-  padding-top: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  box-sizing: border-box;
-  padding-bottom: 80px;
-}
-</style>
 </head>
 <body>
   <!-- Menu superior fixo -->
