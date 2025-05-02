@@ -11,14 +11,27 @@ body, html {
   justify-content: center;
   font-family: Arial, sans-serif;
   }
-
+    
+.titulo-menu {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  padding-left: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+    
 .menu-topo {
   position: fixed;
   top: 0;
   width: 100%;
   background: #004c45;
-  padding: 10px 0;
+  padding: 30px 0;
   z-index: 1000;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
   }
 
@@ -67,7 +80,7 @@ h1 {
   background-color: white;
   
  /* Tooltip */
-.temas-container::after{ 
+.tema-card::after{ 
   content: attr(data-tooltip);
   bottom: 50%;
   left: 50%;
@@ -86,7 +99,7 @@ h1 {
   z-index: 10;
   }
  /* Seta da tooltip */
-.temas-container::before {
+.tema-card::before {
   width: 200px;
   height: 200px;
   background: white;
@@ -104,11 +117,11 @@ h1 {
 }
  
 /* Mostra tooltip ao passar o mouse */
-  .temas-container:hover::after,
-  .temas-container:hover::before {
+  .tema-card:hover::after,
+  .tema-card:hover::before {
   opacity: 1;
   }
-.temas-container:hover {
+.tema-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 14px rgba(0,0,0,0.1);
   background-color: #ebfffa;
@@ -238,6 +251,7 @@ h1 {
 <body>
   <!-- Menu superior fixo -->
   <header class="menu-topo">
+  <h1 class="titulo-menu">Plataforma da Gestão Climática, de Riscos e Desastres</h1>
     <nav>
       <ul>
         <li><a href="index.html">Início</a></li>
@@ -247,25 +261,12 @@ h1 {
     </nav>
   </header>
 
-  <!-- Menu inferior -->
-  <header class="menu-inferior">
-    <nav>
-      <ul>
-        <h1>Plataforma da Gestão Climática, de Riscos e de Desastres</h1>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="pagina2.html">Sobre</a></li>
-        <li><a href="pagina3.html">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
- 
-  
-    <input type="hidden" id="temaLink" value="todos">
+     <input type="hidden" id="temaLink" value="todos">
     <input type="text" id="palavra" placeholder="Filtrar por palavra-chave..." />
    <!-- Imagem de fundo com cards na parte branca -->
   <div class="hero">
-  <div class="temas-container" id="temasContainer">
-    <div class="tema-card" onclick="filtrarTema('ALT')" data-tooltip="Links e ferramentas disponíveis para recebimento de alertas de emergência.">
+  <div class="container-cards" id="temasContainer">
+     <div class="tema-card" onclick="filtrarTema('ALT')" data-tooltip="Links e ferramentas disponíveis para recebimento de alertas de emergência.">
       <i data-lucide="alert-triangle"></i>
       <span>Alerta</span>
     </div>
