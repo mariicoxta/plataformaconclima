@@ -58,6 +58,7 @@ h1 {
   position: fixed;
   font-size: 24px;
   }
+    
  .container-cards {
   display: flex;
   justify-content: flex-end;
@@ -66,7 +67,7 @@ h1 {
   background-color: white;
   
  /* Tooltip */
-.tema-card::after{ 
+.temas-container::after{ 
   content: attr(data-tooltip);
   bottom: 50%;
   left: 50%;
@@ -85,7 +86,7 @@ h1 {
   z-index: 10;
   }
  /* Seta da tooltip */
-.tema-card::before {
+.temas-container::before {
   width: 200px;
   height: 200px;
   background: white;
@@ -103,11 +104,11 @@ h1 {
 }
  
 /* Mostra tooltip ao passar o mouse */
-  .tema-card:hover::after,
-  .tema-card:hover::before {
+  .temas-container:hover::after,
+  .temas-container:hover::before {
   opacity: 1;
   }
-.tema-card:hover {
+.temas-container:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 14px rgba(0,0,0,0.1);
   background-color: #ebfffa;
