@@ -7,16 +7,15 @@
   <style>
 body, html {
   margin: 0;
-  padding: 10px;
   justify-content: center;
   font-family: Arial, sans-serif;
+  border-block-end: 10x solid green;
   }
     
 .titulo-menu {
   color: #ffffff;
   font-size: 24px;
   font-weight: bold;
-  right: 25px;
   position: absolute;
   top: 0;
   transform: translateY(-50%);
@@ -24,12 +23,13 @@ body, html {
     
 .menu-topo {
   top: 0;
+  text-align: right;
   position: fixed;
   width: 100%;
   background: #004c45;
   padding: 30px 0;
   z-index: 1000;
-  display: flex;
+  display: fixed;
   }
     
 .menu-topo ul {
@@ -38,7 +38,7 @@ body, html {
   }
 
  .menu-topo li {
-  margin: 0 20px;
+  margin: 0;
  }   
 
  .menu-topo a {
@@ -54,15 +54,15 @@ body, html {
   box-sizing: border-box;
   }
 h1 {
-  text-align: center;
-  padding-left: 40px;
+  text-align: left;
+  padding: 20px;
   color: white;
   position: fixed;
   font-size: 24px;
   }
     
  .container-cards {
-  font-size: flex;
+  font-size: fixed;
   text-align: center;
   display: contents;
   right: 80px;
