@@ -26,22 +26,13 @@ body, html {
     
 .menu-topo {
   top: 0;
+  position: fixed;
   width: 100%;
   background: #004c45;
   padding: 25px;
   z-index: 1000;
-  text-align: right;  
+  right: 25px;    
   }
-
-.menu-topo ul {
-  list-style: none;
-  display: flex;
- }
-
-.menu-topo li {
-  margin: 0 20px;
-  }
-
 .menu-topo a {
   color: white;
   text-decoration: none;
@@ -66,13 +57,13 @@ h1 {
   font-size: flex;
   text-align: center;
   display: flex;
-  position: fixed;
+  position: absolute;
+  float: left;
   right: 80px;
   top: 150px;
   padding: 40px;
   background-color: white;
-  inline-size: auto;
- }
+  }
 
 .tema-card {
   width: 200px;
