@@ -7,14 +7,11 @@
   <style>
 body, html {
   margin: 0;
-  justify-content: center;
   font-family: Arial, sans-serif;
-  border-block-end: 10x solid #005d47;
   }
     
 .titulo-menu {
   color: #ffffff;
-  text-align: right;
   font-size: 24px;
   font-weight: bold;
   position: absolute;
@@ -34,6 +31,7 @@ body, html {
     
 .menu-topo ul {
   list-style: none;
+  right: 20px;
   display: fixed;
   }
 
@@ -49,13 +47,17 @@ body, html {
   }
     
 .hero {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
   background-image: url('Fundo_Conclima_Plataforma.jpg');
+  background-size: cover;
+  background-position: center;
   background-clip: border-box;
   background-blend-mode: normal;
   background-repeat: no-repeat;
-  background-sizer: auto
-  height: 100%
-  padding: 20px /* Espaçamento interno */
+  
   }
 h1 {
   text-align: left;
