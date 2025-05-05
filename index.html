@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -6,232 +5,184 @@
   <title>Plataforma da Gestão Climática, de Riscos e de Desastres</title>
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <style>
-body, html {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  }
-    
-.titulo-menu {
-  text-align: left;
-  color: #ffffff;
-  font-size: 34px;
-  font-weight: bold;
-  top: 0;
-  }
-    
-.menu-topo {
-  right: 30px;
-  background: #004c45;
-  top: 0;
-  }
-    
-.menu-topo ul {
-  list-style: none;
-  }
+    * {
+      box-sizing: border-box;
+    }
+    body, html {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
 
- .menu-topo li {
-   display: inline-block;
-   margin: 0;
- }   
+    .menu-topo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #004c45;
+      padding: 20px 40px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
 
- .menu-topo a {
-   right: 25px;
-   font-size: 22px;
-   color: white;
-   }
-    
-.hero {
-  display: fixed;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background-image: url('Fundo_Conclima_Plataforma.jpg');
-  background-size: cover;
-  background-position: center;
-  background-clip: border-box;
-  background-blend-mode: normal;
-  background-repeat: no-repeat;
-  
-  }
-h1 {
-  color: white;
-  font-size: 34px;
-  }
-    
-.container-cards {
-  justify-content: space-around; // itens com flex: 10;
-  align-content: center;
-  top: 0;
-  flex-direction: column;
-  gap: 20px;
-  display: fixed;
-  padding: 20px;
-  background-color: white;
-  box-sizing: border-box;
-  }
+    .titulo-menu {
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: bold;
+    }
 
-.tema-card {
-  width: 250px;
-  height: 250px;
-  gap: 110px;
-  justify-content: center;
-  align-content: center;
-  font-size 36px;
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  text-align: center;
-  margin-bottom: 20px;
- }
-    
-   
- /* Tooltip */
-.tema-card::after{ 
-  content: attr(data-tooltip);
-  bottom: 50%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #005d47;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 6px;
-  white-space: normal;
-  text-align: center;
-  font-size: 14px;
-  width: 220px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  z-index: 10;
-  }
- /* Seta da tooltip */
-.tema-card::before {
-  width: 200px;
-  height: 200px;
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-  margin: 20px;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  text-align: center;
-}
- 
-/* Mostra tooltip ao passar o mouse */
-  .tema-card:hover::after,
-  .tema-card:hover::before {
-  opacity: 1;
-  }
-.tema-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
-  background-color: #ebfffa;
-  }
+    .menu-topo ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
 
-.tema-card i {
-  position: flex;
-  text-align: center;
-  align-items: center;
-  margin-bottom: 10px;
-  font-size: 15px;
-  }
-.tema-card span {
-  position: flex;
-  font-size: 22px;
-  font-weight: 600;
-  line-height: 1.2;      
-  margin: 0;            
-  padding: 0;            
-  text-align: center;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  color: #4fb24c;
-  }
-.tema-card svg {
-  position: flex;
-  width: 60px;
-  height: 60px;
-  align-content: center;
-  color: #005d47;
-  text-align: center;
-  align-items: center;
-  margin-bottom: 10px;
-  }
-    
-.voltar {
-  position: fixed;
-  display: none;
-  margin: 20px auto;
-  text-align: center;
-}
-.voltar button {
-  position: fixed;
-  background-color: #005d47;
-  color: white;
-  padding: 10px 20px;
-  font-size: 14px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.2s;
-  }
-.voltar button:hover {
-  position: fixed;
-  background-color: #005d47;
-  }
-    
-.resultados {
-  position: fixed;
-  max-width: 800px;
-  margin: 0 auto;
-  display: none;
-  animation: fadeIn 0.5s ease;
-}
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-  }
-.card {
-  position: fixed;
-  background: white;
-  text-align: center;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 50;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  justify-content: right;
-  align-items: right;
-  box-sizing: border-box;
-  }
-.card h3 {
-  margin-top: 10px;
-  color: #005d47;
-  font-size: 18px;
-  }
-.card p {
-   margin: 15px 5;
-   }
-.card a {
-   color: #ffb700;
-   text-decoration: none;
-   font-weight: bold;
-  }
-.card a:hover {
-   text-decoration: underline;
-   }
-}    
-</style>     
+    .menu-topo li a {
+      color: white;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    .hero {
+      margin-top: 80px;
+      background-image: url('Fundo_Conclima_Plataforma.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 40px;
+      min-height: 100vh;
+    }
+
+    .container-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 40px;
+      border-radius: 12px;
+    }
+
+    .tema-card {
+      width: 200px;
+      height: 200px;
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+      text-align: center;
+    }
+
+    .tema-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+      background-color: #ebfffa;
+    }
+
+    .tema-card svg {
+      width: 40px;
+      height: 40px;
+      color: #005d47;
+      margin-bottom: 10px;
+    }
+
+    .tema-card span {
+      font-size: 18px;
+      font-weight: 600;
+      color: #4fb24c;
+    }
+
+    .tema-card::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #005d47;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      width: 220px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      z-index: 10;
+    }
+
+    .tema-card:hover::after {
+      opacity: 1;
+    }
+
+    #palavra {
+      width: 100%;
+      max-width: 400px;
+      margin: 100px auto 20px;
+      display: block;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .voltar {
+      display: none;
+      text-align: center;
+      margin: 20px;
+    }
+
+    .voltar button {
+      background-color: #005d47;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .resultados {
+      display: none;
+      max-width: 1000px;
+      margin: 20px auto;
+      animation: fadeIn 0.5s ease;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      color: #005d47;
+      font-size: 18px;
+    }
+
+    .card a {
+      color: #ffb700;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
   <!-- Menu superior fixo -->
