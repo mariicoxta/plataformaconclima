@@ -25,15 +25,12 @@ body, html {
 }
     
 .menu-topo {
-  position: fixed;
   top: 0;
   width: 100%;
   background: #004c45;
-  padding: 30px 0;
+  padding: 25px;
   z-index: 1000;
-  display: flex;
-  align-items: right;
-  
+  text-align: right;  
   }
 
 .menu-topo ul {
@@ -51,12 +48,10 @@ body, html {
   }
 
 .hero {
-  background-image: url('Fundo_Conclima_Plataforma.jpg');
-  background-size: cover;
-  background-position: center;
-  padding: 10px /* Espaçamento interno */
-  justify-content: center;
-  align-items: center;
+  background-image: url('Fundo_Conclima_Plataforma.jpg') no-repeat fixed center;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  padding: 20px /* Espaçamento interno */
   box-sizing: border-box;
   }
 h1 {
@@ -71,11 +66,13 @@ h1 {
   font-size: flex;
   text-align: center;
   display: flex;
-  position: absolute;
-  right: 40px;
+  position: fixed;
+  right: 80px;
   top: 150px;
   padding: 40px;
   background-color: white;
+  inline-size: auto;
+ }
 
 .tema-card {
   width: 200px;
@@ -83,13 +80,13 @@ h1 {
   background: white;
   border-radius: 5px;
   padding: 0;
-  display: flex;
+  inline-size: auto;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   box-shadow: 0 3px 10px rgba(0,0,0,0.08);
   margin: 20px;
   cursor: pointer;
+  }
    
  /* Tooltip */
 .tema-card::after{ 
