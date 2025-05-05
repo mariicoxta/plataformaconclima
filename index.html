@@ -38,10 +38,7 @@ body, html {
 .menu-topo ul {
   list-style: none;
   display: flex;
-  justify-content: right;
-  margin: 0;
-  padding: 0;
-  }
+ }
 
 .menu-topo li {
   margin: 0 20px;
@@ -53,16 +50,15 @@ body, html {
   }
 
 .hero {
+  body: 100%
   background-image: url('Fundo_Conclima_Plataforma.jpg');
   background-size: cover;
   background-position: center;
-  width: 200px; /* Largura desejada */
-  height: 100px; /* Altura desejada */
-  border: 2px solid black; /* Borda */
+  width: 100%; /* Largura desejada */
+  height: 100%; /* Altura desejada */
   padding: 10px; /* Espaçamento interno */
-  display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   box-sizing: border-box;
   }
 h1 {
@@ -74,10 +70,10 @@ h1 {
   }
     
  .container-cards {
+  width: 100%
+  min-height: 100vh;
   display: flex;
-  justify-content: flex;
-  flex-wrap: wrap;
-  align-items: right;
+  float: left;
   padding: 100 40px 40px 40px;
   background-color: white;
 
