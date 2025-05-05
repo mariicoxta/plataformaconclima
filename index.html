@@ -16,11 +16,9 @@ body, html {
   color: #ffffff;
   font-size: 24px;
   font-weight: bold;
-  margin: 50;
-  padding-right: 80px;
-  padding-left: 10px;
+  right: 25px;
   position: absolute;
-  top: 50%;
+  top: 0;
   transform: translateY(-50%);
 }
     
@@ -29,15 +27,25 @@ body, html {
   position: fixed;
   width: 100%;
   background: #004c45;
-  padding: 25px;
+  padding: 30px 0;
   z-index: 1000;
-  right: 25px;    
+  display: flex;
   }
-.menu-topo a {
+    
+.menu-topo ul {
+  list-style: none;
+  display: fixed;
+  }
+
+ .menu-topo li {
+  margin: 0 20px;
+ }   
+
+ .menu-topo a {
   color: white;
   text-decoration: none;
   }
-
+    
 .hero {
   background-image: url('Fundo_Conclima_Plataforma.jpg') no-repeat fixed center;
   background-origin: content-box;
