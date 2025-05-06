@@ -19,7 +19,6 @@
       align-items: center;
       background: #004c45;
       padding: 20px 40px;
-      position: fixed;
       top: 0;
       width: 100%;
       z-index: 1000;
@@ -46,10 +45,12 @@
 
     .hero {
       background-image: url('Fundo_Conclima_Plataforma.jpg');
-      background-size: contain;
+      background-size: cover;
       background-position-x: left;
-      background-position-y: top;
+      background-position-y: center;
       background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
       width: 100%;
       height: 100%;
       }
@@ -61,8 +62,10 @@
       border-radius: 12px;
       padding: 12px 10px;
       gap: 20px
-      display: contents;
+      display: flex;;
       font-size: 14px;
+      justify-content: flex-end;
+      flex: 1;
       }
 
     .tema-card {
@@ -74,7 +77,7 @@
       padding: 10px;
       box-shadow: 0 3px 10px rgba(0,0,0,0.08);
       cursor: pointer;
-      display: contents;
+      display: flex;
       flex-direction: column;
       justify-content: center;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
