@@ -6,16 +6,15 @@
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <style>
       body, html {
-      margin: 0;
       font-family: Arial, sans-serif;
       background-image: url('Fundo_Conclima_Plataforma.jpg');
       background-size: cover;
     }
 
     .menu-topo {
-      display: fixed;
       background: #005744;
       width: 100%;
+      top:0;
       z-index: 1000;
      }
 
@@ -23,14 +22,12 @@
       color: #ffffff;
       font-size: 30px;
       font-weight: bold;
-      display: fixed;
       left: 30px;
     }
 
     .menu-topo ul {
       list-style: none;
       gap: 5px;
-      justify-content: space-between;
       }
 
     .menu-topo li a {
@@ -38,6 +35,7 @@
       font-size: 22px;
       text-decoration: none;
       right: 30px;
+      justify-content: space-between;
     }
 
     .fundo {
