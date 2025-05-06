@@ -14,10 +14,7 @@
 
     .menu-topo {
       display: fixed;
-      justify-content: center;
-      align-items: center;
       background: #005744;
-      top: 0;
       width: 100%;
       z-index: 1000;
      }
@@ -32,7 +29,6 @@
 
     .menu-topo ul {
       list-style: none;
-      display: flex;
       gap: 5px;
       justify-content: space-between;
       }
@@ -51,10 +47,7 @@
       }
 
     .container-cards {
-      gap: 10px;
-      height: 100%;
-      top: 100px;
-      right: 30px;
+      width: 50%
       grid-template: auto / auto auto;
       }
     
@@ -69,6 +62,8 @@
       flex-direction: column;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       text-align: center;
+      justify-content: center; /* centraliza na vertical */
+      align-items: center;     /* centraliza na horizontal */
       }
 
     .tema-card:hover {
@@ -85,7 +80,7 @@
       }
 
     .tema-card span {
-      font-size: 18px;
+      font-size: 25px;
       font-weight: 600;
       color: #4fb24c;
     }
