@@ -5,8 +5,7 @@
   <title>Plataforma da Gestão Climática, de Riscos e de Desastres</title>
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <style>
-    
-    body, html {
+      body, html {
       margin: 0;
       font-family: Arial, sans-serif;
     }
@@ -45,17 +44,24 @@
     .hero {
       background-image: url('Fundo_Conclima_Plataforma.jpg');
       background-size: cover;
-      background-position-x: left;
-      background-position-y: center;
+      background-position: center;
       background-repeat: no-repeat;
-      display: fixed;
       width: 100%;
       height: 100%;
-      align-items: center;
       }
 
+    .container-cards {
+       background-color: rgba(255, 255, 255, 0.9);
+       border-radius: 12px;
+       padding: 0;
+       display: flex;
+       font-size: 14px;
+       justify-content:center;
+       flex-direction: column; 
+       align-items: center;
+       flex: 1;
+       }
     
-
     .tema-card {
       width: 150px;
       height: 150px;
@@ -65,13 +71,9 @@
       padding: 10px;
       box-shadow: 0 3px 10px rgba(0,0,0,0.08);
       cursor: pointer;
-      display: flex;
       flex-direction: column;
-      justify-content: center;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
-      position: relative;
-      text-align: center;
-    }
+      }
 
     .tema-card:hover {
       transform: translateY(-5px);
