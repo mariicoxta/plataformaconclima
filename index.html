@@ -35,14 +35,21 @@
       }
 
     .container-cards {
+      background: white;
+      position: fixed;
       grid-template-columns: 200px 200px;
       padding: 8px 12px;
       border-radius: 6px;
       font-size: 14px;
       width: 220px;
+      bottom: 20px;   /* distância da base da página */
+      right: 20px;    /* distância da borda direita */
+      display: flex;
+      flex-direction: column; /* ou row, se quiser lado a lado */
       gap: 10px;
-      
-      }
+      z-index: 1000;  /* garante que fique acima de outros elementos */
+      }  
+    
     
     .tema-card {
       width: 200px;
