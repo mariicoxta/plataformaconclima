@@ -122,7 +122,17 @@
     .tema-card:hover::after {
       opacity: 1;
     }
-
+    
+    .filtros {
+      position: fixed;
+      top: 30%;
+      right: 280px; /* distância da borda direita, ajustável */
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
     #palavra {
       margin: 0;
       display: none;
@@ -198,9 +208,10 @@
       </ul>
     </nav>
   </header>
-
-     <input type="hidden" id="temaLink" value="todos">
+  <div class="filtros">
+    <input type="hidden" id="temaLink" value="todos">
     <input type="text" id="palavra" placeholder="Filtrar por palavra-chave..." />
+  </div>  
    <!-- Imagem de fundo com cards na parte branca -->
 <div class="hero">
   <div class="container-cards" id="temasContainer">
