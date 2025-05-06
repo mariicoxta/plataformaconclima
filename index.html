@@ -46,14 +46,12 @@
       }
 
     .container-cards {
-      right: 40px;
-      top: 40px;
-      display: grid;
+      grid-template-columns: 200px 200px;
       }
     
     .tema-card {
-      width: 220px;
-      height: 180px;
+      width: 120px;
+      height: 80px;
       background: white;
       border-radius: 12px;
       padding: 10px;
@@ -64,8 +62,7 @@
       text-align: center;
       flex-direction: column;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
-      grid-template-columns: 200px 200px;
-    }
+      }
 
     .tema-card:hover {
       transform: translateY(-5px);
