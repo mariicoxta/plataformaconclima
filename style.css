@@ -1,5 +1,6 @@
     body {
       font-family: Arial, sans-serif;
+      padding: 10px;
       background-image: url('Fundo_Conclima_Plataforma.jpg');
       background-size: cover;
       }
@@ -10,11 +11,12 @@
        top: 0;
        display: fixed;
        background: #004c45;
+       margin: 0;
        }
 
     .titulo-menu {
       color: #ffffff;
-      font-weight: bold;
+      font-weight:400;  
       }
 
     .menu-topo li a {
@@ -30,8 +32,6 @@
 
     .container-cards {
       background: white;
-      position: fixed;
-      grid-template-columns: 200px;
       padding: 8px 12px;
       border-radius: 6px;
       flex-direction: column; /* ou row, se quiser lado a lado */
@@ -40,8 +40,6 @@
       }  
     
     .tema-card {
-      width: 150px;
-      height: 150px;
       border-radius: 12px;
       box-shadow: 0 3px 10px rgba(0,0,0,0.08);
       cursor: pointer;
